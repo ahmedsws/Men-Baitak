@@ -1,3 +1,14 @@
+class Category {
+  const Category({
+    this.id,
+    this.name,
+    this.products,
+  });
+  final String id;
+  final String name;
+  final List<Product> products;
+}
+
 class Product {
   const Product(
       {this.title,
@@ -7,17 +18,16 @@ class Product {
       this.price,
       this.color,
       this.season,
-      this.size,
+      this.size, // make it as a class
       this.featured,
-      this.category,
       this.imagePath,
       this.code,
       this.availability});
 
-  final String title, details, category;
+  final String title, details;
   final Gender gender;
-  final Brand brand;
-  final num price;
+  final String brand;
+  final double price;
   final Color color;
   final Season season;
   final int size;
@@ -26,12 +36,6 @@ class Product {
   final int code;
   final bool availability;
 } // freezed
-
-enum Brand {
-  lcwaikiki,
-  koton,
-  hm,
-}
 
 enum Gender {
   male,

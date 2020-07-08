@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
+import 'carousel_card.dart';
+
 class CarouselWithIndicator extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -12,23 +14,14 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicator> {
   int _current = 0;
 
   final imgList = [
-    Card(
-      child: Image(
-        image: AssetImage('assets/images/featured1.jpg'),
-        fit: BoxFit.cover,
-      ),
+    CarouselCard(
+      imgPath: 'assets/images/featured1.jpg',
     ),
-    Card(
-      child: Image(
-        image: AssetImage('assets/images/featured2.jpg'),
-        fit: BoxFit.cover,
-      ),
+    CarouselCard(
+      imgPath: 'assets/images/featured2.jpg',
     ),
-    Card(
-      child: Image(
-        image: AssetImage('assets/images/featured3.jpg'),
-        fit: BoxFit.cover,
-      ),
+    CarouselCard(
+      imgPath: 'assets/images/featured3.jpg',
     ),
   ];
 
