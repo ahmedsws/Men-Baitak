@@ -3,8 +3,8 @@ import 'package:men_baitak/features/category/domain/entities/category.dart';
 
 import 'category_card.dart';
 
-class PreviewCategories extends StatelessWidget {
-  const PreviewCategories({
+class PreviewCategory extends StatelessWidget {
+  const PreviewCategory({
     @required this.category,
   });
 

@@ -21,7 +21,9 @@ class _NavigationBaseState extends State<NavigationBase> {
     final accentColor = Theme.of(context).accentColor;
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: BaseAppBar(title: 'Men Baitak', appBar: AppBar()),
+      appBar: BaseAppBar(
+        title: 'Men Baitak',
+      ),
       body: widget.tabs[_selectedIndex],
       bottomNavigationBar: Material(
         clipBehavior: Clip.antiAlias,

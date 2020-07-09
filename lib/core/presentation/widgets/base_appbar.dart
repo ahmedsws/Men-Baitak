@@ -4,23 +4,21 @@ import 'package:google_fonts/google_fonts.dart';
 
 class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
   const BaseAppBar({
-    @required this.appBar,
     @required this.title,
   });
 
-  final AppBar appBar;
   final String title;
 
   @override
   Widget build(BuildContext context) {
     final aspectRatio = MediaQuery.of(context).size.aspectRatio;
-    Color accentColor = Theme.of(context).primaryColor;
+    Color primaryColor = Theme.of(context).primaryColor;
     return AppBar(
       title: Text(
         title,
         style: GoogleFonts.indieFlower(
           fontWeight: FontWeight.bold,
-          color: accentColor,
+          color: primaryColor,
           fontSize: aspectRatio * 35,
         ),
       ),
@@ -30,7 +28,7 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         IconButton(
           icon: FaIcon(FontAwesomeIcons.search),
-          color: accentColor,
+          color: primaryColor,
           iconSize: aspectRatio * 35,
           onPressed: () {},
         ),
@@ -39,5 +37,5 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(appBar.preferredSize.height);
+  Size get preferredSize => Size.fromHeight(AppBar().preferredSize.height);
 }
