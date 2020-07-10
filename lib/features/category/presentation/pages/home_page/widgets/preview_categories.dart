@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:men_baitak/features/category/domain/entities/category.dart';
+import 'package:men_baitak/features/category/presentation/pages/categories_page/categories_page.dart';
 
 import 'category_card.dart';
 
@@ -31,7 +32,11 @@ class PreviewCategory extends StatelessWidget {
                   'View All',
                   style: labelTextTheme,
                 ),
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => CategoriesPage(),
+                  ));
+                },
               ),
             ],
           ),

@@ -5,9 +5,11 @@ import 'package:google_fonts/google_fonts.dart';
 class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
   const BaseAppBar({
     @required this.title,
+    this.icon,
   });
 
   final String title;
+  final IconButton icon;
 
   @override
   Widget build(BuildContext context) {
@@ -26,13 +28,15 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
       elevation: 0.0,
       backgroundColor: Theme.of(context).accentColor,
       actions: [
-        IconButton(
-          icon: FaIcon(FontAwesomeIcons.search),
-          color: primaryColor,
-          iconSize: aspectRatio * 35,
-          onPressed: () {},
-        ),
+        icon ??
+            IconButton(
+              icon: FaIcon(FontAwesomeIcons.search),
+              color: primaryColor,
+              iconSize: aspectRatio * 35,
+              onPressed: () {},
+            ),
       ],
+      iconTheme: IconThemeData(color: Theme.of(context).primaryColor),
     );
   }
 

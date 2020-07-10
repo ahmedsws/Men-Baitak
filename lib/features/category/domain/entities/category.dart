@@ -24,7 +24,7 @@ class Product {
       this.code,
       this.availability});
 
-  final String title, details;
+  final String title, details, code;
   final Gender gender;
   final String brand;
   final double price;
@@ -33,7 +33,6 @@ class Product {
   final int size;
   final bool featured;
   final String imagePath;
-  final int code;
   final bool availability;
 } // freezed
 
