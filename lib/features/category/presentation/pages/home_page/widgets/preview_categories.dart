@@ -27,17 +27,17 @@ class PreviewCategory extends StatelessWidget {
                 category.name,
                 style: labelTextTheme,
               ),
-              InkWell(
-                child: Text(
-                  'View All',
-                  style: labelTextTheme,
-                ),
-                onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => CategoriesPage(),
-                  ));
-                },
-              ),
+              // InkWell(
+              //   child: Text(
+              //     'View All',
+              //     style: labelTextTheme,
+              //   ),
+              //   onTap: () {
+              //     Navigator.of(context).push(MaterialPageRoute(
+              //       builder: (context) => CategoriesPage(),
+              //     ));
+              //   },
+              // ),
             ],
           ),
         ),

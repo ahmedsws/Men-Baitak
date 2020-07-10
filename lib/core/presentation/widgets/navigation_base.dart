@@ -1,5 +1,6 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:men_baitak/core/presentation/widgets/base_appbar.dart';
 
 class NavigationBase extends StatefulWidget {
@@ -42,24 +43,24 @@ class _NavigationBaseState extends State<NavigationBase> {
           }),
           items: [
             BottomNavyBarItem(
-              icon: Icon(Icons.home),
+              icon: FaIcon(FontAwesomeIcons.home),
               title: Text('Home'),
               activeColor: primaryColor,
             ),
             BottomNavyBarItem(
-                icon: Icon(Icons.category),
+                icon: FaIcon(FontAwesomeIcons.list),
                 title: Text('Categories'),
                 activeColor: primaryColor),
             BottomNavyBarItem(
-                icon: Icon(Icons.card_giftcard),
+                icon: FaIcon(FontAwesomeIcons.shoppingBag),
                 title: Text('Bag'),
                 activeColor: primaryColor),
             BottomNavyBarItem(
-                icon: Icon(Icons.favorite),
+                icon: FaIcon(FontAwesomeIcons.solidHeart),
                 title: Text('Favorites'),
                 activeColor: primaryColor),
             BottomNavyBarItem(
-                icon: Icon(Icons.account_circle),
+                icon: FaIcon(FontAwesomeIcons.userAlt),
                 title: Text('Account'),
                 activeColor: primaryColor),
           ],
