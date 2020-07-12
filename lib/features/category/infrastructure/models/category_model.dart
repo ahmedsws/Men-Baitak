@@ -10,4 +10,14 @@ class CategoryModel extends Category {
           name: name,
           products: products,
         );
+
+  CategoryModel.fromJson(Map<String, dynamic> json)
+      : super(
+          id: json['id'],
+          name: json['name'],
+          products: json['products'],
+        );
+
+  Map<String, dynamic> toJson() =>
+      {'id': id, 'name': name, 'products': products};
 }

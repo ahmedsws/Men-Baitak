@@ -1,13 +1,18 @@
 import 'package:men_baitak/features/category/domain/entities/category.dart';
 import 'package:men_baitak/features/category/domain/repositories/category_repository.dart';
+import 'package:men_baitak/features/category/infrastructure/data_sources/category_remote_data_source.dart';
 
 class CategoryRepositoryImpl implements CategoryRepository {
-  @override
-  Future<Category> getCatgeory(String categoryId) {
-    // TODO: implement getCatgeory
-    throw UnimplementedError();
-  }
+  CategoryRepositoryImpl({CategoryRemoteDataSource remoteDataSource})
+      : remoteDataSource = remoteDataSource ?? CategoryRepositoryImpl();
+
+  final CategoryRemoteDataSource remoteDataSource;
 
   @override
-  Future<List<Category>> getFeaturedProductsCatgeories() {}
+  Future<Category> getCatgeory(String categoryId) =>
+      remoteDataSource.getCatgeory(categoryId);
+
+  @override
+  Future<List<Category>> getFeaturedProductsCatgeories() =>
+      remoteDataSource.getFeaturedProductsCatgeories();
 }
