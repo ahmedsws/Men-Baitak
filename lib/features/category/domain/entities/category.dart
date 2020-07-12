@@ -16,43 +16,18 @@ class Product {
       this.gender,
       this.brand,
       this.price,
-      this.color,
+      this.colors,
       this.season,
-      this.size, // make it as a class
+      this.sizes, // make it as a class
       this.featured,
-      this.imagePath,
+      this.imgPaths,
       this.code,
       this.availability});
 
-  final String title, details, code;
-  final Gender gender;
-  final String brand;
-  final double price;
-  final Color color;
-  final Season season;
-  final int size;
+  final String title, details, code, price, brand, gender, season;
+
+  final List<String> colors, imgPaths, sizes;
+
   final bool featured;
-  final String imagePath;
   final bool availability;
 } // freezed
-
-enum Gender {
-  male,
-  female,
-}
-
-enum Color {
-  black,
-  white,
-  blue,
-  red,
-  yellow,
-  green,
-  colorful,
-}
-
-enum Season {
-  summer,
-  winter,
-  all,
-}

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:men_baitak/features/category/domain/entities/category.dart';
+import 'package:men_baitak/features/category/presentation/pages/details_page/details_page.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({this.product});
@@ -9,7 +10,12 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => DetailsPage(
+                  product: product,
+                )));
+      },
       child: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Material(
@@ -17,7 +23,7 @@ class ProductCard extends StatelessWidget {
           elevation: 1.5,
           child: Image(
             height: height * .33,
-            image: AssetImage(product.imagePath),
+            image: AssetImage(product.imgPaths[0]),
             fit: BoxFit.contain,
           ),
           shape:
