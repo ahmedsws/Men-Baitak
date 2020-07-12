@@ -43,24 +43,20 @@ class _NavigationBaseState extends State<NavigationBase> {
           }),
           items: [
             BottomNavyBarItem(
-              icon: FaIcon(FontAwesomeIcons.home),
+              icon: Icon(FontAwesomeIcons.home),
               title: Text('Home'),
               activeColor: primaryColor,
             ),
             BottomNavyBarItem(
-                icon: FaIcon(FontAwesomeIcons.list),
+                icon: Icon(FontAwesomeIcons.list),
                 title: Text('Categories'),
                 activeColor: primaryColor),
             BottomNavyBarItem(
-                icon: FaIcon(FontAwesomeIcons.shoppingBag),
-                title: Text('Bag'),
-                activeColor: primaryColor),
-            BottomNavyBarItem(
-                icon: FaIcon(FontAwesomeIcons.solidHeart),
+                icon: Icon(FontAwesomeIcons.solidHeart),
                 title: Text('Favorites'),
                 activeColor: primaryColor),
             BottomNavyBarItem(
-                icon: FaIcon(FontAwesomeIcons.userAlt),
+                icon: Icon(FontAwesomeIcons.userAlt),
                 title: Text('Account'),
                 activeColor: primaryColor),
           ],

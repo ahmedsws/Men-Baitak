@@ -21,7 +21,7 @@ class PageBody extends StatelessWidget {
       crossAxisSpacing: 12,
       mainAxisSpacing: 10,
       crossAxisCount: 2,
-      childAspectRatio: (itemWidth * 0.91 / itemHeight),
+      childAspectRatio: (itemWidth * 0.96 / itemHeight),
       children: <Widget>[
         ProductContainer(kCardColor: cardColor),
         ProductContainer(kCardColor: cardColor),
