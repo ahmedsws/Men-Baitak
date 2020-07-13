@@ -19,6 +19,12 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
       passwordController = TextEditingController();
 
   @override
+  void onError(Object error, StackTrace stackTrace) {
+    super.onError(error, stackTrace);
+    print("$error - $stackTrace");
+  }
+
+  @override
   Stream<SignUpState> mapEventToState(SignUpEvent event) async* {
     final name = nameController.text,
         email = emailController.text,

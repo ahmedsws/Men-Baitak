@@ -18,7 +18,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         return;
       }
       final uid = currentUser.uid;
-      final doc = await Firestore.instance.document('user/$uid').get();
+      final doc = await Firestore.instance.document('users/$uid').get();
       if (!doc.exists) {
         await FirebaseAuth.instance.signOut();
         yield Unauthenticated();

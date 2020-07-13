@@ -13,7 +13,7 @@ class AccountPage extends StatelessWidget {
       builder: (context, state) => Container(
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenlygit,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text("Account Page"),
               state is Authenticated
