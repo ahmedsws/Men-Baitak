@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:men_baitak/core/presentation/widgets/button.dart';
-import 'package:men_baitak/features/bag/domain/entities/order.dart';
-import 'package:men_baitak/features/bag/presentation/widgets/order_card.dart';
+import 'package:men_baitak/features/bag/domain/entities/bag_item.dart';
+import 'package:men_baitak/features/bag/presentation/widgets/bag_item_card.dart';
 
 class BagPage extends StatelessWidget {
   const BagPage();
@@ -24,8 +24,8 @@ class BagPage extends StatelessWidget {
               ),
             ),
           ),
-          ...orders.map(
-            (order) => OrderCard(order: order, textStyle: textStyle),
+          ...items.map(
+            (item) => BagItemCard(item: item, textStyle: textStyle),
           ),
           Padding(
             padding: const EdgeInsets.only(bottom: 20, top: 10),
@@ -58,29 +58,29 @@ class BagPage extends StatelessWidget {
   }
 }
 
-final List<Order> orders = [
-  Order(
+final List<BagItem> items = [
+  BagItem(
     title: 'T-Shirt',
     imgPath: 'assets/images/clothes1.jpg',
     quantity: '0',
     price: '99.9 LYD',
     code: 'BS294C',
   ),
-  Order(
+  BagItem(
     title: 'T-Shirt',
     imgPath: 'assets/images/clothes1.jpg',
     quantity: '0',
     price: '99.9 LYD',
     code: 'BS294C',
   ),
-  Order(
+  BagItem(
     title: 'T-Shirt',
     imgPath: 'assets/images/clothes1.jpg',
     quantity: '0',
     price: '99.9 LYD',
     code: 'BS294C',
   ),
-  Order(
+  BagItem(
     title: 'T-Shirt',
     imgPath: 'assets/images/clothes1.jpg',
     quantity: '0',

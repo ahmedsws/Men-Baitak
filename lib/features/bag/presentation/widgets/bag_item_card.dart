@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:men_baitak/features/bag/domain/entities/order.dart';
+import 'package:men_baitak/features/bag/domain/entities/bag_item.dart';
 
-class OrderCard extends StatelessWidget {
-  const OrderCard({
+class BagItemCard extends StatelessWidget {
+  const BagItemCard({
     Key key,
-    @required this.order,
+    @required this.item,
     @required this.textStyle,
   }) : super(key: key);
 
   final TextStyle textStyle;
-  final Order order;
+  final BagItem item;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class OrderCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image.asset(
-                order.imgPath,
+                item.imgPath,
                 height: 100,
                 fit: BoxFit.cover,
               ),
@@ -32,13 +32,13 @@ class OrderCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      order.title,
+                      item.title,
                       style: textStyle.apply(
                         fontSizeDelta: 2,
                       ),
                     ),
                     Text(
-                      order.price,
+                      item.price,
                       style: textStyle,
                     ),
                     SizedBox(
@@ -47,7 +47,7 @@ class OrderCard extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          order.code,
+                          item.code,
                           style: textStyle,
                         ),
                         SizedBox(
@@ -62,7 +62,7 @@ class OrderCard extends StatelessWidget {
                           onPressed: () {},
                         ),
                         Text(
-                          order.quantity,
+                          item.quantity,
                           style: textStyle,
                         ),
                         IconButton(
