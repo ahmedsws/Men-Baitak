@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:men_baitak/features/category/infrastructure/data_sources/category_remote_data_source.dart';
 import 'package:men_baitak/features/category/infrastructure/models/category_model.dart';
@@ -5,12 +7,9 @@ import 'package:men_baitak/features/category/infrastructure/models/category_mode
 class CategoryRemoteDataSourceImpl extends CategoryRemoteDataSource {
   @override
   Future<CategoryModel> getCatgeory(String categoryId) async {
-    final query = await Firestore.instance
-        .collection('categories')
-        .where('id', isEqualTo: categoryId)
-        .getDocuments() as Map<String, dynamic>;
-
-    return CategoryModel.fromJson(query);
+    final query =
+        await Firestore.instance.document('categories/$categoryId').get();
+    return CategoryModel.fromJson(query.data);
   }
 
   @override

@@ -1,12 +1,10 @@
 import 'package:men_baitak/features/bag/domain/entities/bag_item.dart';
+import 'package:men_baitak/features/category/domain/entities/category.dart';
 
 class BagItemModel extends BagItem {
-  const BagItemModel(String title, imgPath, code, price, quantity)
+  const BagItemModel(Product product, String quantity)
       : super(
-          title: title,
-          imgPath: imgPath,
-          code: code,
-          price: price,
+          product: product,
           quantity: quantity,
         );
 }

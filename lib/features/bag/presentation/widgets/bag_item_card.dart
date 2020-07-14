@@ -22,7 +22,7 @@ class BagItemCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image.asset(
-                item.imgPath,
+                item.product.imgPaths[0],
                 height: 100,
                 fit: BoxFit.cover,
               ),
@@ -32,13 +32,13 @@ class BagItemCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      item.title,
+                      item.product.title,
                       style: textStyle.apply(
                         fontSizeDelta: 2,
                       ),
                     ),
                     Text(
-                      item.price,
+                      item.product.price,
                       style: textStyle,
                     ),
                     SizedBox(
@@ -47,7 +47,7 @@ class BagItemCard extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          item.code,
+                          item.product.code,
                           style: textStyle,
                         ),
                         SizedBox(
