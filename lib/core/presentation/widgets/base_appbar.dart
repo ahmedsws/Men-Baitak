@@ -30,7 +30,7 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         icon ??
             IconButton(
-              icon: FaIcon(FontAwesomeIcons.search),
+              icon: FaIcon(FontAwesomeIcons.shoppingBag),
               color: primaryColor,
               iconSize: aspectRatio * 35,
               onPressed: () {},

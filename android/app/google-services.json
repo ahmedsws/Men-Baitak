@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "205972002375",
+    "firebase_url": "https://men-baitak.firebaseio.com",
+    "project_id": "men-baitak",
+    "storage_bucket": "men-baitak.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205972002375:android:b964777522d9503be9c362",
+        "android_client_info": {
+          "package_name": "com.example.men_baitak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "205972002375-eum2q30f141jr8tofjm9ikvojch03f6u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.men_baitak",
+            "certificate_hash": "6cc6fb4c1c49b99c142831e304bde6adc2b6f2c7"
+          }
+        },
+        {
+          "client_id": "205972002375-u2o3punic177mfsk1ugpdk1beikjr54q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD04n0OJu0On5TbavzfAl7JXxpw3za_H1c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "205972002375-u2o3punic177mfsk1ugpdk1beikjr54q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

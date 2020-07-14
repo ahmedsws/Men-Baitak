@@ -29,14 +29,12 @@ class ProductContainer extends StatelessWidget {
         ],
       ),
       padding: const EdgeInsets.all(0),
+      // autosize text
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsets.all(0),
-            child: Image.asset(
-              'assets/images/testphoto.jpg',
-            ),
+          Image.asset(
+            'assets/images/testphoto.jpg',
           ),
           Divider(
             height: 0,
