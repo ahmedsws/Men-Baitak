@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:men_baitak/core/presentation/widgets/button.dart';
 import 'package:men_baitak/features/bag/domain/entities/bag_item.dart';
 import 'package:men_baitak/features/bag/presentation/widgets/bag_item_card.dart';
+import 'package:men_baitak/features/category/domain/entities/category.dart';
 
 class BagPage extends StatelessWidget {
   const BagPage();
@@ -60,30 +61,25 @@ class BagPage extends StatelessWidget {
 
 final List<BagItem> items = [
   BagItem(
-    title: 'T-Shirt',
-    imgPath: 'assets/images/clothes1.jpg',
+    product: products[0],
     quantity: '0',
+  ),
+  BagItem(
+    product: products[1],
+    quantity: '0',
+  ),
+];
+
+final List<Product> products = [
+  Product(
+    title: 'T-Shirt',
+    imgPaths: ['assets/images/clothes1.jpg'],
     price: '99.9 LYD',
     code: 'BS294C',
   ),
-  BagItem(
+  Product(
     title: 'T-Shirt',
-    imgPath: 'assets/images/clothes1.jpg',
-    quantity: '0',
-    price: '99.9 LYD',
-    code: 'BS294C',
-  ),
-  BagItem(
-    title: 'T-Shirt',
-    imgPath: 'assets/images/clothes1.jpg',
-    quantity: '0',
-    price: '99.9 LYD',
-    code: 'BS294C',
-  ),
-  BagItem(
-    title: 'T-Shirt',
-    imgPath: 'assets/images/clothes1.jpg',
-    quantity: '0',
+    imgPaths: ['assets/images/clothes1.jpg'],
     price: '99.9 LYD',
     code: 'BS294C',
   ),
