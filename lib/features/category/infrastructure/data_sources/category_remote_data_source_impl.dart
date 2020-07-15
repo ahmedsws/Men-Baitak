@@ -1,8 +1,7 @@
-import 'dart:html';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:men_baitak/features/category/infrastructure/data_sources/category_remote_data_source.dart';
 import 'package:men_baitak/features/category/infrastructure/models/category_model.dart';
+import 'package:men_baitak/features/category/infrastructure/models/product_model.dart';
 
 class CategoryRemoteDataSourceImpl extends CategoryRemoteDataSource {
   @override
@@ -14,11 +13,26 @@ class CategoryRemoteDataSourceImpl extends CategoryRemoteDataSource {
 
   @override
   Future<List<CategoryModel>> getFeaturedProductsCatgeories() async {
-    return await Firestore.instance
-        .collection('categories')
+    final result = <CategoryModel>[];
+    final products = await Firestore.instance
+        .collectionGroup('products')
+        // .where('featured', isEqualTo: true)
         .getDocuments()
         .then((value) => value.documents
-            .map((e) => CategoryModel.fromJson(e.data))
+            .map((doc) => ProductModel.fromJson(doc.data))
             .toList());
+    final catDocs = await Firestore.instance
+        .collection('categories')
+        .getDocuments()
+        .then((query) => query.documents
+            .map((doc) => CategoryModel.fromJson({
+                  ...doc.data,
+                  'products': products
+                  //.where((prod) => prod.categoryId == doc.documentID),
+                }))
+            .toList());
+    for (final doc in catDocs) {}
+    return catDocs;
+    //query.map((json) => CategoryModel.fromJson(json)).toList();
   }
 }

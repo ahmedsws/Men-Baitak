@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:men_baitak/core/presentation/widgets/base_appbar.dart';
-import 'package:men_baitak/features/category/domain/entities/category.dart';
+import 'package:men_baitak/features/category/domain/entities/product.dart';
+import 'package:men_baitak/features/category/infrastructure/models/product_model.dart';
 import 'package:men_baitak/features/category/presentation/pages/details_page/widgets/detail_dropdown_button.dart';
 
 import '../../../../../core/presentation/widgets/button.dart';
 
 class DetailsPage extends StatelessWidget {
   const DetailsPage({this.product});
-  final Product product;
+  final ProductModel product;
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +41,7 @@ class DetailsPage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 8.0),
                     child: Text(
-                      '${product.price ?? 99.9} LYD',
+                      '${product.price} LYD',
                       style: textStyle,
                     ),
                   ),
@@ -51,14 +52,15 @@ class DetailsPage extends StatelessWidget {
                 ],
               ),
             ),
-            ...product.imgPaths.map(
-              (imgPath) => Image.asset(
-                imgPath,
-                width: double.infinity,
-                height: 250,
-                fit: BoxFit.cover,
-              ),
+            // ...product.imgPaths.map(
+            // (imgPath) =>
+            Image.asset(
+              'assets/images/clothes2.jpg',
+              width: double.infinity,
+              height: 250,
+              fit: BoxFit.cover,
             ),
+            // ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Column(

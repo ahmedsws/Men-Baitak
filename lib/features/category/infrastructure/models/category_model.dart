@@ -1,10 +1,13 @@
 import 'package:men_baitak/features/category/domain/entities/category.dart';
+import 'package:men_baitak/features/category/domain/entities/product.dart';
+
+import 'product_model.dart';
 
 class CategoryModel extends Category {
   const CategoryModel({
     String id,
     String name,
-    List<Product> products,
+    List<ProductModel> products,
   }) : super(
           id: id,
           name: name,
@@ -15,7 +18,7 @@ class CategoryModel extends Category {
       : super(
           id: json['id'],
           name: json['name'],
-          products: json['products'],
+          products: (json['products'] as List<ProductModel>),
         );
 
   Map<String, dynamic> toJson() =>
