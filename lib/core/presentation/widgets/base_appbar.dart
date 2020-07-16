@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:men_baitak/features/bag/presentation/pages/bag_page.dart';
+import 'package:men_baitak/features/category/presentation/pages/details_page/details_page.dart';
 
 class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
   const BaseAppBar({
@@ -33,7 +35,10 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
               icon: FaIcon(FontAwesomeIcons.shoppingBag),
               color: primaryColor,
               iconSize: aspectRatio * 35,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => BagPage()));
+              },
             ),
       ],
       iconTheme: IconThemeData(color: Theme.of(context).primaryColor),

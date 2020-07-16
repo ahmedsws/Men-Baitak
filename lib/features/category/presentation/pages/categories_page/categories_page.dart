@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:men_baitak/features/category/application/blocs/category_bloc/category_bloc.dart';
-import 'package:men_baitak/features/category/presentation/pages/categories_page/page_body.dart';
+import 'package:men_baitak/features/category/presentation/pages/categories_page/widgets/page_body.dart';
 
 class CategoriesPage extends StatelessWidget {
   @override

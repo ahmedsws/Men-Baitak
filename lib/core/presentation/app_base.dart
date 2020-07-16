@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:men_baitak/features/authentication/application/blocs/auth/auth_bloc.dart';
 import 'package:men_baitak/features/authentication/application/blocs/auth/auth_event.dart';
-import 'package:men_baitak/features/authentication/presentation/account_tab.dart';
+import 'package:men_baitak/features/authentication/presentation/account_page/account_tab.dart';
 import 'package:men_baitak/features/bag/application/blocs/bloc/bag_bloc.dart';
 import 'package:men_baitak/features/category/application/blocs/category_bloc/category_bloc.dart';
 import 'package:men_baitak/features/category/presentation/pages/categories_page/categories_page.dart';

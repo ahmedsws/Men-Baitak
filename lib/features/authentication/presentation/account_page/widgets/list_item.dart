@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ListItem extends StatelessWidget {
-  const ListItem(this.itemIcon, this.itemText);
+  const ListItem(this.itemIcon, this.itemText, this.onTap);
   final itemIcon;
   final String itemText;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: Card(
         elevation: 2,
         child: LayoutBuilder(builder: (context, constrains) {

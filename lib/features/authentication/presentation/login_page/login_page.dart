@@ -4,9 +4,8 @@ import 'package:men_baitak/core/presentation/widgets/snackbar.dart';
 import 'package:men_baitak/features/authentication/application/blocs/auth/auth_bloc.dart';
 import 'package:men_baitak/features/authentication/application/blocs/login/login_bloc.dart';
 import 'package:men_baitak/features/authentication/application/blocs/login/login_state.dart';
-import 'package:men_baitak/features/authentication/presentation/login_screen.dart';
-
-import 'login_form.dart';
+import 'package:men_baitak/features/authentication/presentation/login_page/widgets/login_form.dart';
+import 'package:men_baitak/features/authentication/presentation/login_page/widgets/login_screen.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage();

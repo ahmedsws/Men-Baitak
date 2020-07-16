@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:men_baitak/features/authentication/application/blocs/auth/auth_bloc.dart';
 import 'package:men_baitak/features/authentication/application/blocs/auth/auth_state.dart';
-import 'package:men_baitak/features/authentication/presentation/login_page.dart';
+import 'package:men_baitak/features/authentication/presentation/login_page/login_page.dart';
 
 import 'account_page.dart';
 

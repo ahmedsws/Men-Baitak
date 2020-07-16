@@ -6,8 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:men_baitak/features/authentication/application/blocs/auth/auth_bloc.dart';
 import 'package:men_baitak/features/authentication/application/blocs/auth/auth_event.dart';
 import 'package:men_baitak/features/authentication/application/blocs/auth/auth_state.dart';
-
-import 'list_item.dart';
+import 'package:men_baitak/features/authentication/presentation/account_page/widgets/list_item.dart';
 
 class AccountPage extends StatelessWidget {
   @override
@@ -54,13 +53,16 @@ class AccountPage extends StatelessWidget {
                     Container(
                       height: height * .6,
                       child: ListView(children: [
-                        ListItem(Icons.account_circle, "Edit Profile"),
-                        ListItem(Icons.notifications, "Notifications"),
-                        ListItem(Icons.format_list_bulleted, "Orders"),
-                        ListItem(Icons.share, "Invite Friends"),
+                        ListItem(Icons.account_circle, "Edit Profile", () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => EditProfile()));
+                        }),
+                        ListItem(Icons.notifications, "Notifications", () {}),
+                        ListItem(Icons.format_list_bulleted, "Orders", () {}),
+                        ListItem(Icons.share, "Invite Friends", () {}),
                         ListItem(Icons.question_answer,
-                            "Frequently Asked Questions"),
-                        ListItem(Icons.info, "About Us"),
+                            "Frequently Asked Questions", () {}),
+                        ListItem(Icons.info, "About Us", () {}),
                       ]),
                     ),
                   ])

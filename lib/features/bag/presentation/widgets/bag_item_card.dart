@@ -27,7 +27,7 @@ class BagItemCard extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -53,26 +53,26 @@ class BagItemCard extends StatelessWidget {
                         SizedBox(
                           width: 30,
                         ),
-                        IconButton(
-                          icon: FaIcon(
-                            FontAwesomeIcons.minus,
-                            size: 15,
-                          ),
-                          color: Theme.of(context).accentColor,
-                          onPressed: () {},
-                        ),
+//                        IconButton(
+//                          icon: FaIcon(
+//                            FontAwesomeIcons.minus,
+//                            size: 15,
+//                          ),
+//                          color: Theme.of(context).accentColor,
+//                          onPressed: () {},
+//                        ),
                         Text(
                           item.quantity,
                           style: textStyle,
                         ),
-                        IconButton(
-                          icon: FaIcon(
-                            FontAwesomeIcons.plus,
-                            size: 15,
-                          ),
-                          color: Theme.of(context).accentColor,
-                          onPressed: () {},
-                        ),
+//                        IconButton(
+//                          icon: FaIcon(
+//                            FontAwesomeIcons.plus,
+//                            size: 15,
+//                          ),
+//                          color: Theme.of(context).accentColor,
+//                          onPressed: () {},
+//                        ),
                       ],
                     ),
                   ],

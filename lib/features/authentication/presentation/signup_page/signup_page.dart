@@ -10,8 +10,7 @@ import 'package:men_baitak/features/authentication/application/blocs/signup/sign
 import 'package:men_baitak/features/authentication/application/blocs/signup/signup_event.dart';
 import 'package:men_baitak/features/authentication/application/blocs/signup/signup_state.dart';
 import 'file:///C:/Users/alibo/AndroidStudioProjects/menbaitak/lib/features/authentication/presentation/signup_page/widgets/company_icon.dart';
-
-import 'login_screen.dart';
+import 'package:men_baitak/features/authentication/presentation/login_page/widgets/login_screen.dart';
 
 class SignUpPage extends StatelessWidget {
   @override

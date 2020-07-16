@@ -26,7 +26,7 @@ class PageBody extends StatelessWidget {
       crossAxisSpacing: 12,
       mainAxisSpacing: 10,
       crossAxisCount: 2,
-      childAspectRatio: (itemWidth * 0.96 / itemHeight),
+      childAspectRatio: (itemWidth * 0.94 / itemHeight),
       children: <Widget>[
         ...products.map(
           (product) =>
