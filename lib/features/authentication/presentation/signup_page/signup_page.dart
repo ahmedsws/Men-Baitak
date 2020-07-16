@@ -9,7 +9,7 @@ import 'package:men_baitak/features/authentication/application/blocs/auth/auth_b
 import 'package:men_baitak/features/authentication/application/blocs/signup/signup_bloc.dart';
 import 'package:men_baitak/features/authentication/application/blocs/signup/signup_event.dart';
 import 'package:men_baitak/features/authentication/application/blocs/signup/signup_state.dart';
-import 'package:men_baitak/features/authentication/presentation/widgets/company_icon.dart';
+import 'file:///C:/Users/alibo/AndroidStudioProjects/menbaitak/lib/features/authentication/presentation/signup_page/widgets/company_icon.dart';
 
 import 'login_screen.dart';
 
