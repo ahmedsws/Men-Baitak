@@ -28,6 +28,7 @@ class ProductModel extends Product {
           sizes: sizes,
           featured: featured,
           availability: availability,
+          categoryId: categoryId,
         );
 
   ProductModel.fromJson(Map<String, dynamic> json)
@@ -40,9 +41,10 @@ class ProductModel extends Product {
           gender: json['gender'],
           season: json['season'],
           colors: List.from(json['colors']),
-          imgPaths: json['imgPaths'],
+          imgPaths: List.from(json['imgPaths']),
           sizes: List.from(json['sizes']),
           featured: json['featured'],
           availability: json['availability'],
+          categoryId: json['categoryId'],
         );
 }

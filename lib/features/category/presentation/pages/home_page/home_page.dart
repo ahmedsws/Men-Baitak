@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:men_baitak/features/category/application/blocs/category_bloc/category_bloc.dart';
-import 'package:men_baitak/features/category/domain/entities/category.dart';
-
 import 'widgets/carousel_with_indicator.dart';
 import 'widgets/preview_categories.dart';
 
@@ -11,25 +9,22 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => CategoryBloc()..add(FetchCatgories()),
-      child: BlocBuilder<CategoryBloc, CategoriesState>(
-        builder: (context, state) => state is CategoriesLoading
-            ? Center(
-                child: CircularProgressIndicator(),
-              )
-            : ListView(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 30),
-                    child: CarouselWithIndicator(),
-                  ),
-                  ...state.categories.map((category) => PreviewCategory(
-                        category: category,
-                      ))
-                ],
-              ),
-      ),
+    return BlocBuilder<CategoryBloc, CategoriesState>(
+      builder: (context, state) => state is CategoriesLoading
+          ? Center(
+              child: CircularProgressIndicator(),
+            )
+          : ListView(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 30),
+                  child: CarouselWithIndicator(),
+                ),
+                ...state.categories.map((category) => PreviewCategory(
+                      category: category,
+                    ))
+              ],
+            ),
     );
   }
 }

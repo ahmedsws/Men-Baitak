@@ -4,14 +4,16 @@ class Button extends StatelessWidget {
   const Button({
     @required this.text,
     @required this.textStyle,
+    this.onPressed,
   });
   final String text;
   final TextStyle textStyle;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
     return RaisedButton(
-      onPressed: () {},
+      onPressed: onPressed,
       child: Text(
         text,
         style: textStyle.apply(

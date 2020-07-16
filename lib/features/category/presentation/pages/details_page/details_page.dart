@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:men_baitak/core/presentation/widgets/base_appbar.dart';
-import 'package:men_baitak/features/category/domain/entities/product.dart';
+import 'package:men_baitak/features/bag/application/blocs/bloc/bag_bloc.dart';
+import 'package:men_baitak/features/bag/application/blocs/bloc/bag_event.dart';
+import 'package:men_baitak/features/bag/infrastructure/models/bag_item_model.dart';
 import 'package:men_baitak/features/category/infrastructure/models/product_model.dart';
 import 'package:men_baitak/features/category/presentation/pages/details_page/widgets/detail_dropdown_button.dart';
 
@@ -54,8 +57,8 @@ class DetailsPage extends StatelessWidget {
             ),
             // ...product.imgPaths.map(
             // (imgPath) =>
-            Image.asset(
-              'assets/images/clothes2.jpg',
+            Image(
+              image: NetworkImage(product.imgPaths[0]),
               width: double.infinity,
               height: 250,
               fit: BoxFit.cover,
@@ -92,7 +95,15 @@ class DetailsPage extends StatelessWidget {
               ),
             ),
             Center(
-              child: Button(text: 'Add to bag', textStyle: textStyle),
+              child: Button(
+                text: 'Add to bag',
+                textStyle: textStyle,
+                onPressed: () {
+                  BlocProvider.of<BagBloc>(context).add(BagEvent.addToBag(
+                    BagItemModel(product: product, quantity: '1'),
+                  ));
+                },
+              ),
             ),
           ],
         ),

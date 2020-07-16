@@ -1,8 +1,9 @@
 import 'package:men_baitak/features/bag/domain/entities/bag_item.dart';
 import 'package:men_baitak/features/category/domain/entities/product.dart';
+import 'package:men_baitak/features/category/infrastructure/models/product_model.dart';
 
 class BagItemModel extends BagItem {
-  const BagItemModel({Product product, String quantity})
+  const BagItemModel({ProductModel product, String quantity})
       : super(
           product: product,
           quantity: quantity,

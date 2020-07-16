@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:men_baitak/features/category/application/blocs/category_bloc/category_bloc.dart';
+import 'package:men_baitak/features/category/infrastructure/models/product_model.dart';
 import 'product_container.dart';
 
 class PageBody extends StatelessWidget {
   const PageBody({
     Key key,
+    @required this.products,
     @required this.itemWidth,
     @required this.itemHeight,
     @required this.cardColor,
   }) : super(key: key);
 
+  final List<ProductModel> products;
   final double itemWidth;
   final double itemHeight;
   final Color cardColor;
@@ -23,10 +28,10 @@ class PageBody extends StatelessWidget {
       crossAxisCount: 2,
       childAspectRatio: (itemWidth * 0.96 / itemHeight),
       children: <Widget>[
-        ProductContainer(kCardColor: cardColor),
-        ProductContainer(kCardColor: cardColor),
-        ProductContainer(kCardColor: cardColor),
-        ProductContainer(kCardColor: cardColor),
+        ...products.map(
+          (product) =>
+              ProductContainer(product: product, kCardColor: cardColor),
+        ),
       ],
     );
   }

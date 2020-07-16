@@ -17,7 +17,7 @@ class BagRepositoryImpl extends BagRepository {
 
   @override
   Future<void> deleteBagItem(BagItemModel bagItem, User user) {
-    remoteDataSource.deleteBagItem(bagItem, user);
+    remoteDataSource.deleteBagItem(bagItem, user); // increament and decrement
   }
 
   @override

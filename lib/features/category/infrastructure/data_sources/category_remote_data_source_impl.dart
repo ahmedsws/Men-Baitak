@@ -13,10 +13,9 @@ class CategoryRemoteDataSourceImpl extends CategoryRemoteDataSource {
 
   @override
   Future<List<CategoryModel>> getFeaturedProductsCatgeories() async {
-    final result = <CategoryModel>[];
     final products = await Firestore.instance
         .collectionGroup('products')
-        // .where('featured', isEqualTo: true)
+        .where('featured', isEqualTo: true)
         .getDocuments()
         .then((value) => value.documents
             .map((doc) => ProductModel.fromJson(doc.data))
@@ -28,11 +27,12 @@ class CategoryRemoteDataSourceImpl extends CategoryRemoteDataSource {
             .map((doc) => CategoryModel.fromJson({
                   ...doc.data,
                   'products': products
-                  //.where((prod) => prod.categoryId == doc.documentID),
+                      .where((prod) => prod.categoryId == doc.data['id'])
+                      .toList(),
                 }))
             .toList());
-    for (final doc in catDocs) {}
     return catDocs;
     //query.map((json) => CategoryModel.fromJson(json)).toList();
+    // for (final doc in catDocs) {}
   }
 }
