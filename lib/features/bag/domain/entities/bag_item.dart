@@ -1,4 +1,4 @@
-import 'package:men_baitak/features/category/domain/entities/category.dart';
+import 'package:men_baitak/features/category/domain/entities/product.dart';
 
 class BagItem {
   const BagItem({this.product, this.quantity});

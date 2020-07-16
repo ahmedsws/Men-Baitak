@@ -1,7 +1,9 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:men_baitak/core/presentation/widgets/base_appbar.dart';
+import 'package:men_baitak/features/bag/application/blocs/bloc/bag_bloc.dart';
 
 class NavigationBase extends StatefulWidget {
   const NavigationBase({

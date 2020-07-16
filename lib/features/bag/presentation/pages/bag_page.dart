@@ -3,6 +3,7 @@ import 'package:men_baitak/core/presentation/widgets/button.dart';
 import 'package:men_baitak/features/bag/domain/entities/bag_item.dart';
 import 'package:men_baitak/features/bag/presentation/widgets/bag_item_card.dart';
 import 'package:men_baitak/features/category/domain/entities/category.dart';
+import 'package:men_baitak/features/category/domain/entities/product.dart';
 
 class BagPage extends StatelessWidget {
   const BagPage();
