@@ -29,6 +29,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.5.0-nullsafety.3"
+
   bloc:
     dependency: transitive
     description:
@@ -197,6 +198,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.16.1"
+
   cubit:
     dependency: transitive
     description:
@@ -457,6 +459,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.9.6+3"
+
   nested:
     dependency: transitive
     description:
@@ -485,6 +488,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.9.3"
+
   path:
     dependency: transitive
     description:
@@ -597,6 +601,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.2.3"
+
   sky_engine:
     dependency: transitive
     description: flutter

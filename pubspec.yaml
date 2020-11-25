@@ -23,10 +23,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
     
   firebase_auth: ^0.16.1
   cloud_firestore: ^0.13.7
   json_annotation: ^3.0.1
+
   bottom_navy_bar: ^5.4.0
   carousel_slider: ^2.2.1
   google_fonts: ^1.1.0

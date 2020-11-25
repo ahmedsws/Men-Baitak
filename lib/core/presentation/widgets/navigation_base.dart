@@ -1,6 +1,8 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
+
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'package:men_baitak/core/presentation/widgets/base_appbar.dart';
 
 class NavigationBase extends StatefulWidget {
@@ -22,9 +24,11 @@ class _NavigationBaseState extends State<NavigationBase> {
     final accentColor = Theme.of(context).accentColor;
     return Scaffold(
       backgroundColor: Colors.white,
+
       appBar: BaseAppBar(
         title: 'Men Baitak',
       ),
+
       body: widget.tabs[_selectedIndex],
       bottomNavigationBar: Material(
         clipBehavior: Clip.antiAlias,
@@ -43,7 +47,9 @@ class _NavigationBaseState extends State<NavigationBase> {
           }),
           items: [
             BottomNavyBarItem(
+
               icon: Icon(FontAwesomeIcons.home),
+
               title: Text('Home'),
               activeColor: primaryColor,
             ),
@@ -57,6 +63,7 @@ class _NavigationBaseState extends State<NavigationBase> {
                 activeColor: primaryColor),
             BottomNavyBarItem(
                 icon: Icon(FontAwesomeIcons.userAlt),
+
                 title: Text('Account'),
                 activeColor: primaryColor),
           ],

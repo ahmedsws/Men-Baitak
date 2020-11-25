@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:men_baitak/features/authentication/application/blocs/auth/auth_bloc.dart';
@@ -7,6 +8,7 @@ import 'package:men_baitak/features/authentication/presentation/account_page/acc
 import 'package:men_baitak/features/category/application/blocs/category_bloc/category_bloc.dart';
 import 'package:men_baitak/features/category/presentation/pages/categories_page/categories_page.dart';
 import 'package:men_baitak/features/category/presentation/pages/home_page/home_page.dart';
+
 
 import 'widgets/navigation_base.dart';
 
@@ -21,6 +23,7 @@ class AppBase extends StatelessWidget {
   ];
 
   @override
+
   Widget build(BuildContext context) => BlocProvider(
         create: (_) => AuthBloc()..add(StartApp()),
         child: MaterialApp(
@@ -34,4 +37,5 @@ class AppBase extends StatelessWidget {
               child: NavigationBase(tabs: tabs),
             )),
       );
+
 }

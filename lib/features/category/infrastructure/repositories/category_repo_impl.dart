@@ -16,4 +16,5 @@ class CategoryRepositoryImpl implements CategoryRepository {
   @override
   Future<List<Category>> getFeaturedProductsCatgeories() =>
       remoteDataSource.getFeaturedProductsCatgeories();
+
 }
