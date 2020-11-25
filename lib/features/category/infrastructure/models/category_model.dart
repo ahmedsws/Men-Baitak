@@ -1,5 +1,4 @@
 import 'package:men_baitak/features/category/domain/entities/category.dart';
-import 'package:men_baitak/features/category/domain/entities/product.dart';
 
 import 'product_model.dart';
 

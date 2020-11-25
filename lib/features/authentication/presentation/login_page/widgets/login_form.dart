@@ -7,7 +7,7 @@ import 'package:men_baitak/core/presentation/widgets/login_field.dart';
 import 'package:men_baitak/features/authentication/application/blocs/login/login_bloc.dart';
 import 'package:men_baitak/features/authentication/application/blocs/login/login_event.dart';
 import 'package:men_baitak/features/authentication/application/blocs/login/login_state.dart';
-import 'file:///C:/Users/alibo/AndroidStudioProjects/menbaitak/lib/features/authentication/presentation/signup_page/signup_page.dart';
+import 'package:men_baitak/features/authentication/presentation/signup_page/signup_page.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm();

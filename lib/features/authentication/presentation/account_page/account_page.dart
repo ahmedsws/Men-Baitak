@@ -55,7 +55,7 @@ class AccountPage extends StatelessWidget {
                       child: ListView(children: [
                         ListItem(Icons.account_circle, "Edit Profile", () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => EditProfile()));
+                              builder: (context) => Placeholder()));
                         }),
                         ListItem(Icons.notifications, "Notifications", () {}),
                         ListItem(Icons.format_list_bulleted, "Orders", () {}),

@@ -25,20 +25,29 @@ class BagPage extends StatelessWidget {
             fontSizeFactor: MediaQuery.of(context).size.width / 220,
           ),
         ),
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-//            Padding(
-//              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-//              child: Text(
-//                'My Bag',
-//                style: textStyle.apply(
-//                  fontSizeFactor: MediaQuery.of(context).size.width / 150,
-//                ),
-//              ),
-//            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: Text(
+                'My Bag',
+                style: textStyle.apply(
+                  fontSizeFactor: MediaQuery.of(context).size.width / 150,
+                ),
+              ),
+            ),
             ...items.map(
               (item) => BagItemCard(item: item, textStyle: textStyle),
             ),
@@ -64,6 +73,9 @@ class BagPage extends StatelessWidget {
                 child: Button(
                   text: 'Check out',
                   textStyle: textStyle,
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                 ),
               ),
             ),
